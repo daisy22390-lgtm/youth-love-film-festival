@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>心動放映室｜青春愛情影展</title>
+  <meta name="description" content="心動放映室：用三天電影，收藏青春裡每一次怦然心動。">
+  <style>
+    :root { --ink:#312440; --pink:#f45c8a; --rose:#ffedf3; --cream:#fffaf4; --sun:#ffc95d; --line:#eadde4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif; line-height:1.65; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    nav { position:absolute; z-index:2; inset:0 0 auto; padding:22px 0; color:#fff; }
+    nav .wrap { display:flex; justify-content:space-between; align-items:center; }
+    .brand { color:#fff; font-weight:900; letter-spacing:.08em; text-decoration:none; }
+    nav a:not(.brand) { color:#fff; text-decoration:none; margin-left:20px; font-size:.94rem; }
+    .hero { min-height:680px; display:grid; align-items:center; overflow:hidden; color:#fff; background:radial-gradient(circle at 76% 22%, #ffadbd 0 7%, transparent 7.3%), radial-gradient(circle at 83% 35%, #f45c8a 0 17%, transparent 17.3%), linear-gradient(130deg,#372142,#7a315b 54%,#ee5c83); }
+    .hero .wrap { position:relative; padding:120px 0 85px; }
+    .eyebrow { display:inline-block; border:1px solid #ffffff80; border-radius:99px; padding:7px 14px; font-size:.82rem; letter-spacing:.12em; }
+    h1 { max-width:760px; margin:22px 0 14px; font-size:clamp(3.4rem, 9vw, 7.6rem); line-height:1.03; letter-spacing:-.07em; }
+    .hero p { max-width:510px; font-size:1.12rem; color:#fff8fb; }
+    .cta { display:inline-block; margin-top:20px; padding:14px 22px; border-radius:99px; background:var(--sun); color:#322440; font-weight:800; text-decoration:none; box-shadow:0 10px 30px #180d2380; }
+    .ticket { position:absolute; right:4%; bottom:72px; width:250px; padding:28px; transform:rotate(8deg); color:#372142; background:#fff8e7; border-radius:8px; box-shadow:18px 18px 0 #29183333; }
+    .ticket::before,.ticket::after { content:""; position:absolute; width:26px; height:26px; border-radius:50%; background:#9d3b62; left:-13px; } .ticket::before{top:28px}.ticket::after{bottom:28px}
+    .ticket b { display:block; font-size:1.35rem; } .ticket small{display:block;letter-spacing:.1em;margin-top:10px}
+    section { padding:94px 0; } .kicker { color:var(--pink); font-weight:900; letter-spacing:.1em; font-size:.8rem; }
+    h2 { font-size:clamp(2rem,4vw,3.6rem); line-height:1.18; margin:8px 0 20px; letter-spacing:-.045em; }
+    .intro { display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:center; }
+    .love-card { min-height:340px; display:grid; place-content:center; text-align:center; padding:35px; background:linear-gradient(145deg,#ffd0dd,#fff1bd); border-radius:52% 48% 44% 56% / 50% 42% 58% 50%; box-shadow:inset 0 0 0 12px #ffffff70; }
+    .love-card .heart { font-size:5.4rem; line-height:1; } .love-card strong{font-size:1.5rem}.love-card em{font-style:normal;color:#a95173}
+    .program { background:var(--rose); } .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .film { padding:28px; min-height:300px; border-radius:20px; background:#fff; border:1px solid var(--line); position:relative; overflow:hidden; }
+    .film::after { content:"✦"; position:absolute; right:20px; bottom:8px; font-size:4rem; color:#ffd2df; } .film:nth-child(2)::after{content:"♥";color:#ffe4a8}.film:nth-child(3)::after{content:"☾";color:#e5d7ff}
+    .film time { color:#a96a82; font-weight:700; font-size:.9rem; } .film h3{font-size:1.55rem;line-height:1.25;margin:16px 0 10px}.film p{position:relative;z-index:1;font-size:.94rem}
+    .schedule { display:grid; grid-template-columns:220px 1fr; gap:55px; } .schedule p{margin:0;color:#67596a}.rows{border-top:1px solid var(--line)}
+    .row{display:grid;grid-template-columns:105px 1fr auto;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}.day{font-weight:900;color:var(--pink)}
+    .join { color:#fff; text-align:center; background:linear-gradient(115deg,#44304f,#af3c6c); }.join h2{margin-inline:auto;max-width:700px}.join p{max-width:540px;margin:0 auto 25px;color:#fff1f6}.join .cta{background:#fff;color:#9a315d}
+    footer{padding:25px 0;background:#281d31;color:#d9cad6;font-size:.86rem;text-align:center}
+    @media(max-width:760px){nav a:not(.brand){display:none}.hero{min-height:630px}.ticket{right:6%;bottom:36px;width:205px}.intro,.schedule{grid-template-columns:1fr;gap:30px}.grid{grid-template-columns:1fr}.row{grid-template-columns:72px 1fr}.row span:last-child{grid-column:2}.love-card{min-height:280px}section{padding:68px 0}}
+  </style>
+</head>
+<body>
+  <nav><div class="wrap"><a class="brand" href="#top">心動放映室</a><div><a href="#about">影展理念</a><a href="#program">片單</a><a href="#schedule">時刻表</a></div></div></nav>
+  <header class="hero" id="top"><div class="wrap"><span class="eyebrow">2026 · 09.26—09.28 · TAIPEI</span><h1>把心動<br>放進銀幕裡</h1><p>三天、六部電影，寫給還願意相信相遇的人。讓我們在光影熄滅之前，再勇敢一次。</p><a class="cta" href="#program">探索放映片單 →</a><aside class="ticket"><b>YOUTH<br>LOVE FILM<br>FESTIVAL</b><small>心動放映室 · 09/26—09/28</small></aside></div></header>
+  <main>
+    <section id="about"><div class="wrap intro"><div><span class="kicker">OUR STORY</span><h2>青春不是一段時間，<br>是每次想起你時的亮光。</h2><p>「心動放映室」是一場獻給青春愛情的影展。我們精選關於相遇、錯過、告白與成長的作品，邀請你坐進戲院，也坐回那個曾為一句話、一首歌而徹夜未眠的自己。</p></div><div class="love-card"><div class="heart">♥</div><strong>讓電影替你說<br>還沒說出口的話</strong><em>— 2026 青春愛情影展 —</em></div></div></section>
+    <section class="program" id="program"><div class="wrap"><span class="kicker">FEATURED FILMS</span><h2>本屆精選片單</h2><div class="grid"><article class="film"><time>OPENING FILM · 09.26</time><h3>《夏日的最後一封信》</h3><p>畢業前夕，兩個總是擦肩而過的人，用一封沒有署名的信，交換了整個夏天的祕密。</p></article><article class="film"><time>SPOTLIGHT · 09.27</time><h3>《我們在月台說再見》</h3><p>末班車抵達前的二十分鐘，讓一段以為早已結束的關係，重新找到了答案。</p></article><article class="film"><time>CLOSING FILM · 09.28</time><h3>《如果那天有下雨》</h3><p>雨傘、錄音帶與一張被折過的車票，拼湊出兩人失聯十年後最溫柔的重逢。</p></article></div></div></section>
+    <section id="schedule"><div class="wrap schedule"><div><span class="kicker">SCREENING SCHEDULE</span><h2>和心動約個時間</h2><p>台北光點電影院・二樓 A 廳<br>每場放映後皆有映後交流。</p></div><div class="rows"><div class="row"><span class="day">09.26<br>FRI</span><strong>18:30　《夏日的最後一封信》</strong><span>開幕放映</span></div><div class="row"><span class="day">09.27<br>SAT</span><strong>14:00　《我們在月台說再見》</strong><span>主題座談</span></div><div class="row"><span class="day">09.28<br>SUN</span><strong>17:00　《如果那天有下雨》</strong><span>閉幕放映</span></div></div></div></section>
+    <section class="join"><div class="wrap"><span class="eyebrow">SAVE YOUR SEAT</span><h2>留一個位置，<br>給仍然相信愛的你。</h2><p>影展免費入場，座位有限。帶著你的朋友、回憶，或一點點還沒整理好的心情來吧。</p><a class="cta" href="mailto:hello@heartlight.example">我要預約放映</a></div></section>
+  </main><footer>© 2026 心動放映室 Youth Love Film Festival · 為課程作業示範製作</footer>
+</body>
+</html>
